@@ -51,7 +51,7 @@ I think I should share this projects to anyone who's new to android or JAVA to h
 # Getting started
 **Requirement**
 * Min android SDK: 9
-* Target SDK: 21
+* Target SDK: 23+
 * Android support library (Support-V7, Support-Design and RecyclerView)
 
 **Adding this library to your projects**
