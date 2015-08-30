@@ -41,7 +41,7 @@ I think I should share this projects to anyone who's new to android or JAVA to h
 * [MaterialRaisedButton]
 * [MaterialFlatButton]
 * [MaterialImageButton]
-* [MaterialEditText]
+* [MaterialEditText] (https://github.com/DanielShum/MaterialAppBase/wiki/MaterialEditText)
 
 **Components**
 * FragmentAdapter
