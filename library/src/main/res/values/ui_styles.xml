@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Material Buttons -->
+
+    <style name="Button">
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_width">128dp</item>
+    </style>
+
+    <style name="Button.White">
+        <item name="button_theme">light</item>
+        <item name="normal_state_color">@color/base_ui_white</item>
+        <item name="pressed_state_color">@color/base_ui_light_grey</item>
+        <item name="android:textColor">@color/base_text_color_dark</item>
+    </style>
+
+    <style name="Button.Blue">
+        <item name="normal_state_color">@color/base_ui_blue</item>
+        <item name="pressed_state_color">@color/base_ui_blue_pressed</item>
+        <item name="android:textColor">@color/base_ui_white</item>
+    </style>
+
+    <style name="Button.Blue.Flat">
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Material Button end -->
+
+</resources>

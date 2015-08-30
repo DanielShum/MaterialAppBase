@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/baseStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/baseMasterView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/baseAppbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/baseToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            </android.support.design.widget.AppBarLayout>
+  
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/baseAppbarLayout" >
+
+                <RelativeLayout
+                    android:id="@+id/customizedContentViewHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <View
+                    android:id="@+id/baseVersionAdaptiveActionbarShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/rectangle_grey_shawdow" />
+            </RelativeLayout>
+            
+     
+    </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

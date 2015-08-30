@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Text colors -->
+    <color name="base_text_color_light">#666666</color>
+    <color name="base_text_color_dark">#333333</color>
+    <color name="base_ui_light_grey">#EAEAEA</color>
+    <color name="base_ui_white">#ffffff</color>
+    <color name="base_ui_black">#000000</color>
+    <color name="base_ui_blue">#0099FF</color>
+    <color name="base_ui_blue_pressed">#47B5FB</color>
+    <color name="base_ui_green">#669900</color>
+    <color name="base_ui_red">#ff0000</color>
+    <color name="base_ui_transparent_green">#70669900</color>
+    <color name="base_ui_selected_holo_light">#16000000</color>
+    <color name="base_ui_selected_holo_dark">#16FFFFFF</color>
+
+    <color name="base_touch_feedback_transparent">#00FFFFFF</color>
+    <color name="base_touch_feedback_holo_dark">#32FFFFFF</color>
+    <color name="base_touch_feedback_holo_light">#32000000</color>
+    
+    <color name="base_divider_grey">#16000000</color>
+    
+    <color name="base_theme_red">#ff4444</color>
+    <color name="base_theme_blue">#0099ff</color>
+    <color name="base_theme_yellow">#fe7800</color>
+    <color name="base_theme_green">#0f9d58</color>
+    
+
+    
+</resources>

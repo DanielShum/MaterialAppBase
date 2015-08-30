@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+        <style name="DropDownListAnimation" parent="android:Animation" mce_bogus="1">      
+         <item name="android:windowEnterAnimation">@anim/anim_dropdown_list_show</item>  
+        <item name="android:windowExitAnimation">@anim/anim_dropdown_list_dismiss</item>  
+    </style>
+    
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.daililol.material.appbase.widget.MultiSwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="afterDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="36dp" 
+                android:layout_gravity="center"/>
+
+            <com.daililol.material.appbase.widget.HeaderableGridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@null"
+                android:numColumns="2"/>
+
+            <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/emptyViewEmptyMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:textColor="@color/base_text_color_dark"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+            <com.daililol.material.appbase.widget.MaterialRaisedButton
+                style="@style/Button.Blue"
+                android:id="@+id/emptyViewRefreshButton"
+                android:text="@string/base_refresh" />
+        </LinearLayout>
+        
+        </LinearLayout>
+    </com.daililol.material.appbase.widget.MultiSwipeRefreshLayout>
+

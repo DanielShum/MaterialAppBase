@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="list_view_footer" type="id"/>
+    <item name="list_view_header" type="id"/>
+    <item name="button_icon" type="id"/>
+    <item name="overflow" type="id" />
+    <item name="search" type="id"/>
+    <item name="expand" type="id"/>
+    
+</resources>

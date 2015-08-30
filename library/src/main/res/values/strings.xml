@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Appbase</string>
+    
+	<string name="base_loading">Loading&#8230;</string>
+	<string name="base_no_more_items">No more items</string>
+	<string name="base_retry">Retry</string>
+	<string name="base_refresh">Refresh</string>
+	<string name="base_search">Search</string>
+    
+
+</resources>
