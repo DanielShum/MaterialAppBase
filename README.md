@@ -38,10 +38,10 @@ I think I should share this projects to anyone who's new to android or JAVA to h
 * [RecyclerView fragment]  (https://github.com/DanielShum/MaterialAppBase/blob/master/library/src/main/java/com/daililol/material/appbase/base/BaseRecyclerViewFragment.java)
 
 **Widgets**
-* [MaterialRaisedButton] (https://github.com/DanielShum/MaterialAppBase/wiki/MaterialRaisedButton)
-* [MaterialFlatButton]
-* [MaterialImageButton]
-* [MaterialEditText] (https://github.com/DanielShum/MaterialAppBase/wiki/MaterialEditText)
+* MaterialRaisedButton [see usage] (https://github.com/DanielShum/MaterialAppBase/wiki/MaterialRaisedButton)
+* MaterialFlatButton
+* MaterialImageButton
+* MaterialEditText  [see usage] (https://github.com/DanielShum/MaterialAppBase/wiki/MaterialEditText)
 
 **Components**
 * FragmentAdapter
