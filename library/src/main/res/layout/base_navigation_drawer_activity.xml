@@ -16,7 +16,7 @@
         <RelativeLayout
             android:id="@+id/baseStatusBar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="36dp" />
 
         <RelativeLayout
             android:id="@+id/baseMasterView"

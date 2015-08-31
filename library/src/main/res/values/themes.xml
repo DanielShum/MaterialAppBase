@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light"/>
+
     <style name="Base" parent="AppBaseTheme"/>
     
     <style name="Base.AppTheme">
@@ -9,4 +11,7 @@
         <item name="windowActionBar">false</item> 
         <item name="windowNoTitle">true</item> 
     </style>
+
+    <style name="Base.AppTheme.WindowContentTransition"/>
+
 </resources>

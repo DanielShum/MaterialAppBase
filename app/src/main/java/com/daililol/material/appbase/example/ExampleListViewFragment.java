@@ -2,6 +2,7 @@ package com.daililol.material.appbase.example;
 
 import android.os.Bundle;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -148,7 +149,8 @@ public class ExampleListViewFragment extends BaseListViewFragment implements Lis
                 ExampleSearchBarActivity.launch(this.getActivity());
                 break;
             case 3:
-                ExampleCollapsingViewActivity.launch(this.getActivity());
+                ExampleCollapsingViewActivity.launch((AppCompatActivity)this.getActivity());
+                //ExampleCollapsingViewActivity.launchWithSharedElementTransition(this.getActivity(), view.findViewById(android.R.id.icon1));
             default:
         }
     }

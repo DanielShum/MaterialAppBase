@@ -43,10 +43,7 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
 		toolbar = (Toolbar) findViewById(R.id.baseToolbar);
 		customizedContentViewHolder = (RelativeLayout) findViewById(R.id.customizedContentViewHolder);
         floatingActionButton = (FloatingActionButton) findViewById(R.id.baseFab);
-		
-		setTransictionName();
-        supportPostponeEnterTransition();
-		
+
         toolbar.setBackgroundColor(Color.TRANSPARENT);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
@@ -121,8 +118,6 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
 	abstract public View setupCollapsingView();
 	abstract public View setupContentView();
 
-
-	abstract public String setupTransictionName();
 
 
     /**
@@ -251,9 +246,10 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
 		getToolBar().setTitleTextColor(color);
 	}
 
-	private void setTransictionName(){
-		String transictionName = setupTransictionName();
-		if (transictionName != null) ViewCompat.setTransitionName(appbarLayout, transictionName);
+	protected void setTransitionName(int viewId, String transitionName){
+		if (transitionName != null) {
+            ViewCompat.setTransitionName(findViewById(viewId), transitionName);
+        }
 	}
 	
 
