@@ -77,7 +77,7 @@ dependencies {
 	...
     android:icon="@drawable/ic_launcher"
     android:label="@string/app_name"
-    android:theme="@style/Base.AppTheme">
+    android:theme="@style/Base.AppTheme.WindowContentTransition">
 	...
   </application>
 ```
