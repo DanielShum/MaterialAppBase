@@ -58,7 +58,7 @@ I think I should share this projects to anyone who's new to android or JAVA to h
 * Download this project and unzip to you Android studio workpace directory.
 * Include the library to your project by editting settings.gradle file. it may look like below
 ```gradle
-include ':app', '..:MaterialAppBase:library'
+include ':app', '..:MaterialAppBase:materialAppBaseLibrary'
 ```
 
 **Adding dependence**
@@ -67,7 +67,7 @@ dependencies {
    compile 'com.android.support:appcompat-v7:23.0.0'
    compile 'com.android.support:recyclerview-v7:23.0.0'
    compile 'com.android.support:design:23.0.0'
-   compile project(':..:MaterialAppBase:library')   //this is the compile code to add this library
+   compile project(':..:MaterialAppBase:materialAppBaseLibrary')   //this is the compile code to add this library
 }
 ```
 
