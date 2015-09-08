@@ -13,6 +13,9 @@ MaterialAppBase is a open source project which help android developers to:
 * [Getting Started](#getting-started)
 * [Creating activities](#creating-activities)
 
+**Apps use MaterialAppBase**
+* [Funpica](https://play.google.com/store/apps/details?id=com.pompeiicity.funpic)
+
 # Background
 I am a full stack engineer work on mobile apps. I have done many android projects. What I am saying is if you are an android developer you already know that: 
 * We have to write so much repeated codes to create different look-alike activities. 
