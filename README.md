@@ -149,6 +149,7 @@ dependencies {
   	protected void setupNavigationDrawerItem(ExtendableListView listView,
   			BaseNavigationDrawerListAdapter navigationListAdapter) {
   		// TODO add the navigation menu item here
+  		listView.setBackgroundColor(Color.WHITE);
   		navigationListAdapter.addItem("item 1", 
   		  DrawableUtil.getDrawable(this, R.drawable.ic_chat_grey600_24dp));
   		navigationListAdapter.addItem("item 2", 
