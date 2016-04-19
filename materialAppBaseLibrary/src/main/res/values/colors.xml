@@ -10,10 +10,12 @@
     <color name="base_ui_blue">#0099FF</color>
     <color name="base_ui_blue_pressed">#47B5FB</color>
     <color name="base_ui_green">#669900</color>
+    <color name="base_ui_green_pressed">#229900</color>
     <color name="base_ui_red">#ff0000</color>
     <color name="base_ui_transparent_green">#70669900</color>
     <color name="base_ui_selected_holo_light">#16000000</color>
     <color name="base_ui_selected_holo_dark">#16FFFFFF</color>
+    <color name="base_ui_grey600">#757575</color>
 
     <color name="base_touch_feedback_transparent">#00FFFFFF</color>
     <color name="base_touch_feedback_holo_dark">#32FFFFFF</color>

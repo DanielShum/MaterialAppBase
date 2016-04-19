@@ -1,6 +1,7 @@
 package com.daililol.material.appbase.base;
 
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
@@ -18,7 +19,7 @@ abstract public class BaseFragment extends Fragment{
      */
     protected void doTaskInBackground(Object... params){
 
-        new AsyncTask<Object, Integer, Object>(){
+        AsyncTask asyncTask = new AsyncTask<Object, Integer, Object>(){
 
             @Override
             protected Object doInBackground(Object... params) {
@@ -37,7 +38,13 @@ abstract public class BaseFragment extends Fragment{
 
             }
 
-        }.execute(params);
+        };
+
+        if (Build.VERSION.SDK_INT >= 11){
+            asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, params);
+        }else{
+            asyncTask.execute(params);
+        }
     }
 
 
@@ -98,6 +105,12 @@ abstract public class BaseFragment extends Fragment{
         }
     };
 
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        hasDestroyed = false;
+    }
 
     @Override
     public void onDestroy(){

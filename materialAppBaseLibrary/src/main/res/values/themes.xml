@@ -12,6 +12,9 @@
         <item name="windowNoTitle">true</item> 
     </style>
 
+    <style name="Base.AppTheme.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
     <style name="Base.AppTheme.WindowContentTransition"/>
 
 </resources>

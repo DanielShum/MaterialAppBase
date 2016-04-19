@@ -182,6 +182,14 @@ AdapterView.OnItemClickListener{
 		return actionBar;
 	}
 
+	protected ExtendableListView getNavigationListView(){
+		return navigationListView;
+	}
+
+	protected BaseNavigationDrawerListAdapter getNavigationListAdapter(){
+		return navigationListAdapter;
+	}
+
 	/**
 	 * 
 	 * @param title

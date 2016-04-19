@@ -64,9 +64,30 @@ public class MaterialRaisedButton extends AppCompatButton{
 
 	
 	}
+
+	public void setButtonBackgroundTintColor(int normalState, int focusedState){
+
+		ColorStateList colorList;
+		if (Build.VERSION.SDK_INT >= 21){
+			colorList = DrawableUtil.createColorStateListAPI21(normalState);
+		}else{
+			colorList = DrawableUtil.createColorStateList(normalState, focusedState, focusedState, focusedState, normalState);
+		}
+
+		setSupportBackgroundTintList(colorList);
+	}
 	
-	
-	
+	public void setButtonBackgroundTintColor(int tintColor){
+
+		ColorStateList colorList;
+		if (Build.VERSION.SDK_INT >= 21){
+			colorList = DrawableUtil.createColorStateListAPI21(tintColor);
+		}else{
+			colorList = DrawableUtil.createColorStateList(tintColor, tintColor, tintColor, tintColor, tintColor);
+		}
+
+		setSupportBackgroundTintList(colorList);
+	}
 
 	
 

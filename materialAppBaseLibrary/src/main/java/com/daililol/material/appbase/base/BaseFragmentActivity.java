@@ -2,6 +2,7 @@ package com.daililol.material.appbase.base;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
@@ -11,11 +12,31 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
+import android.view.inputmethod.InputMethodManager;
 
 public abstract class BaseFragmentActivity extends AppCompatActivity{
 
     private boolean hasDestroyed = false;  //Use to indicate that if the activity has destroyed.
 
+
+    /**
+     * Hides the soft keyboard
+     */
+    public void hideSoftKeyboard() {
+        if(getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+
+    /**
+     * Shows the soft keyboard
+     */
+    public void showSoftKeyboard(View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        view.requestFocus();
+        inputMethodManager.showSoftInput(view, 0);
+    }
 
     /**
      * To shake a view
@@ -48,7 +69,7 @@ public abstract class BaseFragmentActivity extends AppCompatActivity{
      */
     protected void doTaskInBackground(Object... params){
 
-        new AsyncTask<Object, Integer, Object>(){
+        AsyncTask asyncTask = new AsyncTask<Object, Integer, Object>(){
 
             @Override
             protected Object doInBackground(Object... params) {
@@ -67,7 +88,13 @@ public abstract class BaseFragmentActivity extends AppCompatActivity{
 
             }
 
-        }.execute(params);
+        };
+
+        if (Build.VERSION.SDK_INT >= 11){
+            asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, params);
+        }else{
+            asyncTask.execute(params);
+        }
     }
 
 
@@ -165,4 +192,6 @@ public abstract class BaseFragmentActivity extends AppCompatActivity{
         uiMessageHandler.removeCallbacksAndMessages(null);
         super.onDestroy();
     }
+
+
 }

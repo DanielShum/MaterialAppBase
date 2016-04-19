@@ -53,14 +53,14 @@
         
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
+    <!--android.support.design.widget.FloatingActionButton
         android:id="@+id/baseFab"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_margin="24dp"
         app:fabSize="normal"
         app:layout_anchor="@id/baseAppbarLayout"
-        app:layout_anchorGravity="right|bottom|end"/>
+        app:layout_anchorGravity="right|bottom|end"/-->
     
 
 </android.support.design.widget.CoordinatorLayout>

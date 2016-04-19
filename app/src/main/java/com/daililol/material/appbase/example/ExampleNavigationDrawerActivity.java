@@ -61,9 +61,13 @@ public class ExampleNavigationDrawerActivity extends BaseNavigationDrawerActivit
         StateListDrawable iconDrawable3 = DrawableUtil.createStateListDrawable(
                 this, normalState, selectedState, selectedState, selectedState, normalState);
 
-        navigationListAdapter.addItem("item 1", iconDrawable1);
-        navigationListAdapter.addItem("item 2", iconDrawable2);
-        navigationListAdapter.addItem("item 3", iconDrawable3);
+        navigationListAdapter.addItem("item 1", iconDrawable1, BaseNavigationDrawerListAdapter.MenuItem.Type.MENU_ITEM);
+        navigationListAdapter.addItem("item 2", iconDrawable2, BaseNavigationDrawerListAdapter.MenuItem.Type.MENU_ITEM);
+        navigationListAdapter.addItem("item 3", iconDrawable3, BaseNavigationDrawerListAdapter.MenuItem.Type.MENU_ITEM);
+        navigationListAdapter.addItem(null, null, BaseNavigationDrawerListAdapter.MenuItem.Type.DIVIDER);
+        navigationListAdapter.addItem("item 4", null, BaseNavigationDrawerListAdapter.MenuItem.Type.MENU_ITEM);
+        navigationListAdapter.addItem("item 5", null, BaseNavigationDrawerListAdapter.MenuItem.Type.MENU_ITEM);
+        navigationListAdapter.addItem("item 6", null, BaseNavigationDrawerListAdapter.MenuItem.Type.MENU_ITEM);
     }
 
     @Override

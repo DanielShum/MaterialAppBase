@@ -3,15 +3,20 @@ package com.daililol.material.appbase.component;
 import java.util.ArrayList;
 
 import com.daililol.material.appbase.R;
+import com.daililol.material.appbase.utility.Converter;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -22,8 +27,8 @@ public class BaseNavigationDrawerListAdapter extends BaseAdapter{
     private int selectedItem = -1;
 	
 	
-	public void addItem(String text, Drawable icon){
-		menuList.add(new MenuItem(text, icon));
+	public void addItem(String text, Drawable icon, MenuItem.Type type){
+		menuList.add(new MenuItem(text, icon, type));
 		this.notifyDataSetChanged();
 	}
 
@@ -49,28 +54,52 @@ public class BaseNavigationDrawerListAdapter extends BaseAdapter{
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-		
-		ViewHolder viewHolder;
-		
-		if (convertView == null) {
-			convertView = LayoutInflater.from(context).inflate(R.layout.base_item_for_navigation_drawer, null);
-			viewHolder  = new ViewHolder(convertView);
-		}else{
-			viewHolder = (ViewHolder)convertView.getTag();
+
+		MenuItem.Type type = menuList.get(position).type;
+
+		if (type == MenuItem.Type.DIVIDER){
+            AbsListView.LayoutParams convertViewParams = new AbsListView.LayoutParams(
+                    AbsListView.LayoutParams.MATCH_PARENT, Converter.dp2px(context, 17));
+            convertView = new LinearLayout(context);
+            convertView.setLayoutParams(convertViewParams);
+            convertView.setBackgroundColor(Color.WHITE);
+            ((LinearLayout)convertView).setOrientation(LinearLayout.VERTICAL);
+            ((LinearLayout)convertView).setGravity(Gravity.CENTER);
+
+            LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, Converter.dp2px(context, 1));
+            View divider = new View(context);
+            divider.setLayoutParams(dividerParams);
+            divider.setBackgroundColor(ContextCompat.getColor(context, R.color.base_divider_grey));
+
+            ((LinearLayout)convertView).addView(divider);
+
+            return convertView;
 		}
+
+        if (type == MenuItem.Type.BLANK_DIVEDER){
+            AbsListView.LayoutParams convertViewParams = new AbsListView.LayoutParams(
+                    AbsListView.LayoutParams.MATCH_PARENT, Converter.dp2px(context, 8));
+            convertView = new View(context);
+            convertView.setLayoutParams(convertViewParams);
+            convertView.setBackgroundColor(Color.WHITE);
+            return convertView;
+        }
+
+        convertView = LayoutInflater.from(context).inflate(R.layout.base_item_for_navigation_drawer, null);
+        ViewHolder viewHolder  = new ViewHolder(convertView);
 
         if (selectedItem == position){
             viewHolder.backgroundView.setSelected(true);
@@ -88,9 +117,6 @@ public class BaseNavigationDrawerListAdapter extends BaseAdapter{
 		}else{
 			viewHolder.imageView.setVisibility(View.GONE);
 		}
-		 
-		
-		
 		
 		return convertView;
 	}
@@ -109,11 +135,19 @@ public class BaseNavigationDrawerListAdapter extends BaseAdapter{
 	}
 	
 	public static class MenuItem{
+
+		public static enum Type{
+			DIVIDER,
+            BLANK_DIVEDER,
+			MENU_ITEM
+		}
+
+		public Type type;
 		public String text;
 		public Drawable icon;
 		
-		public MenuItem(String text, Drawable icon){
-
+		public MenuItem(String text, Drawable icon, Type type){
+			this.type = type;
 			this.text = text;
 			this.icon = icon;
 		}

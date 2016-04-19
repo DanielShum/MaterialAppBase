@@ -149,6 +149,7 @@ public abstract class BaseSearchBarActivity extends BaseActionbarActivity implem
 		searchKeywordEditText.setEnabled(false);
 		searchKeywordText.setText(searchKeywordEditText.getText());
 		searchKeywordView.setVisibility(View.VISIBLE);
+		hideSoftKeyboard();
 		return true;
 	}
 	
@@ -157,6 +158,8 @@ public abstract class BaseSearchBarActivity extends BaseActionbarActivity implem
 		searchKeywordText.setText("");
 		searchKeywordEditText.setEnabled(true);
 		searchKeywordEditText.setText("");
+        searchKeywordEditText.requestLayout();
+        showSoftKeyboard(searchKeywordEditText);
 		return true;
 	}
 	
@@ -193,8 +196,6 @@ public abstract class BaseSearchBarActivity extends BaseActionbarActivity implem
 			// Hide keyboard
 			if (onBeforeSearch()){
 				onSearch(searchKeywordText.getText().toString());
-				((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE))
-				.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 				
 			}
 

@@ -97,7 +97,7 @@ public abstract class BaseRecyclerViewFragment extends BaseFragment implements S
      *
      * @return RecyclerView
      */
-	protected RecyclerView getRecyclerView(){
+	public RecyclerView getRecyclerView(){
 		return recyclerView;
 	}
 

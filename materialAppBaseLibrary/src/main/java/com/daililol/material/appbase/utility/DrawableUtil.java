@@ -9,8 +9,8 @@ import android.os.Build;
 
 public class DrawableUtil {
 	
-	public static Drawable changeDrawableColor(Drawable drawable, int distinationColor){
-		drawable.setColorFilter(distinationColor, android.graphics.PorterDuff.Mode.MULTIPLY);
+	public static Drawable changeDrawableColor(Drawable drawable, int destinationColor){
+		drawable.setColorFilter(destinationColor, android.graphics.PorterDuff.Mode.MULTIPLY);
 		return drawable;
 	}
 	
@@ -52,7 +52,14 @@ public class DrawableUtil {
         ColorStateList colorList = new ColorStateList(states, colors); 
         return colorList;  
     }
-	
+
+	public static StateListDrawable createStateListDrawable(Context context, int normalResourceId, int activeResourceId){
+		Drawable drawableNormal = getDrawable(context, normalResourceId);
+		Drawable drawableActive = getDrawable(context, activeResourceId);
+		return createStateListDrawable(context, drawableNormal, drawableActive,
+				drawableActive, drawableActive, drawableNormal);
+	}
+
 	public static StateListDrawable createStateListDrawable(Context contet, 
 			Drawable normal, Drawable selected, Drawable pressed, Drawable focused, Drawable unable){
 		

@@ -30,7 +30,7 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
 	private RelativeLayout customizedCollapsingViewHolder;
 	private Toolbar toolbar;
 	private RelativeLayout customizedContentViewHolder;
-    private FloatingActionButton floatingActionButton;
+    //private FloatingActionButton floatingActionButton;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -42,7 +42,7 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
         customizedCollapsingViewHolder = (RelativeLayout) findViewById(R.id.baseCustomizedCollapsingViewHolder);
 		toolbar = (Toolbar) findViewById(R.id.baseToolbar);
 		customizedContentViewHolder = (RelativeLayout) findViewById(R.id.customizedContentViewHolder);
-        floatingActionButton = (FloatingActionButton) findViewById(R.id.baseFab);
+        //floatingActionButton = (FloatingActionButton) findViewById(R.id.baseFab);
 
         toolbar.setBackgroundColor(Color.TRANSPARENT);
         setSupportActionBar(toolbar);
@@ -224,10 +224,10 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
      * --------------------------------------
      * @return FloatingActionButton
      */
-    protected FloatingActionButton getFloatingActionButton(){
+    /*protected FloatingActionButton getFloatingActionButton(){
 
         return floatingActionButton;
-    }
+    }*/
 
     /**
      *
@@ -260,7 +260,7 @@ public abstract class BaseCollapsingActionbarActivity extends BaseFragmentActivi
 		getToolbarLayout().setStatusBarScrimColor(color);
 
         ColorStateList colorStateList = DrawableUtil.createColorStateList(color, color, color, color, color);
-        getFloatingActionButton().setBackgroundTintList(colorStateList);
+        //getFloatingActionButton().setBackgroundTintList(colorStateList);
 	}
 	
 	
